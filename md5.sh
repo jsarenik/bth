@@ -2,7 +2,7 @@
 
 for i in index.js
 do
-  MD5=$(md5sum $i | cut -b-32)
+  MD5=$(md5sum $i | cut -b-16)
   EXT=${i##*.}
   N=${i%%.$EXT}
   rm -v $N-*
