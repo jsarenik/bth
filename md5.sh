@@ -8,5 +8,5 @@ do
   rm -v $N-*
   NN="${N}-${MD5}.$EXT"
   cp $i $NN
-  sed -i "s|$N[^\"]\+|$NN|" index.html
+  sed -i "s|\"$N[^\"]\+|\"$NN|" index.html
 done
