@@ -25,7 +25,7 @@ var time = (new Date()).getTime();
 document.getElementById("log").textContent = "";
 e=d=s=y=0;
 mywhat = $('#what').val();
-mynumber = $('#number').val().replace(/[0-9]/g, "");
+mynumber = $('#number').val().replace(new RegExp("[^0-9]", "g"), "");
 
     $.get("https://api.coindesk.com/v1/bpi/currentprice.json", function(data){
       log("```")
