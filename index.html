@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Some Miscelaneous Computations">
+    <link rel="icon" href="terminal.png">
+    <meta name="slingcode-tags" content="bth">
+    <style>
+      body { color: #def; font-size: 1.5em; background-color: #333; max-width: 1024px; width: 100%; display: block; margin: auto; }
+      textarea { background-color: #333; color: #def; white-space: pre-wrap; word-wrap: break-word; font-size: 0.8em; }
+    </style>
+    <title>Bitcoin Trade Helper</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <form action="javascript:void(0);">
+    <p>Fill in the number and unit:
+    <input type="text" id="number" size="15" tabindex="1" onchange="genoutput()">
+<select id="what" onchange="genoutput()">
+<optgroup label="fiat">
+    <option>EUR</option>
+    <option>USD</option>
+</optgroup>
+<optgroup label="hard money">
+    <option>satoshi</option>
+</optgroup>
+</select>
+    </p>
+    </form>
+    <textarea onfocus="selectText()" onclick="selectText()" name="biglog" id="log" cols="23" rows="14"></textarea>
+  </body>
+</html>
