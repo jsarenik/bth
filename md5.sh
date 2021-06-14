@@ -1,6 +1,6 @@
 #!/bin/sh
 
-for i in index.js
+for i in bth.js bth.css
 do
   MD5=$(md5sum $i | cut -b-16)
   EXT=${i##*.}
