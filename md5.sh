@@ -5,8 +5,8 @@ do
   MD5=$(md5sum $i | cut -b-16)
   EXT=${i##*.}
   N=${i%%.$EXT}
-  rm -v $N-*
+  rm -v $N-*.$EXT
   NN="${N}-${MD5}.$EXT"
   cp $i $NN
-  sed -i "s|\"$N[^\"]\+|\"$NN|" index.html
+  sed -i "s|\"$N[^\.]*\.$EXT|\"$NN|" index.html
 done
