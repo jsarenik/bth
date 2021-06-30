@@ -18,7 +18,7 @@
     </style>
     <title>Bitcoin Trade Helper</title>
     <script src="jquery-3.6.0.min.js"></script>
-    <script src="bth-f97755c9b30653eb.js"></script>
+    <script src="bth-e3d7644d3c695a7d.js"></script>
   </head>
   <body>
 <a href=
@@ -36,7 +36,7 @@ fill="currentColor" class="octo-body"></path>
 </svg></a>
     <form id="myform" action="javascript:void(0);">
     <p>Fill in the number and unit:<br>
-    <input type="text" id="number" size="15" tabindex="1">
+    <input type="number" onfocus="selectNum()" onsubmit="genoutput()" id="number" size="15" tabindex="1" value="0">
 <select id="what" tabindex="2">
 <optgroup label="fiat">
     <option>EUR</option>
@@ -49,7 +49,7 @@ fill="currentColor" class="octo-body"></path>
 <button onclick="genoutput()" value="OK" tabindex="3">OK</button>
     </p>
     </form>
-    <textarea onfocus="selectText()" onclick="selectText()" name="biglog" id="log" cols="23" rows="14" tabindex="4"></textarea>
+    <textarea onfocus="genoutput()" name="biglog" id="log" cols="23" rows="14" tabindex="3"></textarea>
     <p><a href="https://write.anyone.eu.org">Feed-back and comments</a></p>
   </body>
 </html>
