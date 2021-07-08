@@ -58,7 +58,7 @@ function genoutput() {
         log("And " + mynumber + " USD is ...");
         result = (1 / y * mynumber).toFixed(8)
         log("  " + result + " BTC");
-        log("  " + result * 100000000 + " sat");
+        log("  " + (result * 100000000).toFixed(0) + " sat");
         break;
       case "satoshi":
         y = data.bpi.USD.rate;
