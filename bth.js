@@ -12,9 +12,9 @@ function readyFn( jQuery ) {
   log("Hello!");
   log("");
   log("This is Bit Trade Helper.");
-  log("Focus this textarea to");
+  log("Click the OK button to");
   log("recompute with current");
-  log("values above.");
+  log("values.");
 }
 
 $(window).on("load", readyFn);
