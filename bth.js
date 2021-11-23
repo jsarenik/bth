@@ -70,7 +70,7 @@ function genoutput() {
         log("  EUR: " + resulte);
         break;
     }
-    log("```");
     } // if mynumber != 0
+    log("```");
   }, "json");
 }
