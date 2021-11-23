@@ -70,12 +70,7 @@ function genoutput() {
         log("  EUR: " + resulte);
         break;
     }
+    log("```");
     } // if mynumber != 0
-    $.get("https://mempool.space/api/v1/fees/recommended", function(data){
-      fee = data.hourFee;
-      log("Recommended fee is");
-      log("  " + fee + " sat/vB");
-      log("```");
-    }, "json");
   }, "json");
 }
