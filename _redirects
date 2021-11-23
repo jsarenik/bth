@@ -1,0 +1,3 @@
+# https://docs.netlify.com/routing/redirects/#syntax-for-the-redirects-file
+https://bth.bublina.eu.org/* https://bth.patocka.eu.org/:splat 301!
+https://nostalgic-swanson-1f1412.netlify.app/* https://bth.patocka.eu.org/:splat 301!
