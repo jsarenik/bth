@@ -1,3 +1,3 @@
 #!/bin/sh
 ./md5.sh
-rsync -av . ~/src/jekyll/static/bth/
+rsync -av --exclude=.git* . ~/src/jekyll/static/bth/
