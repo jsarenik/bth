@@ -34,7 +34,14 @@ function genoutput() {
   mywhat = $('#what').val();
   mynumber = $('#number').val().replace(new RegExp("[^\.0-9]", "g"), "");
 
-  $.get("https://api.coindesk.com/v1/bpi/currentprice.json", function(data){
+  eurer=0
+  usder=0
+  $.get("https://display.anyone.eu.org/api/strike.json", function(data){
+  for (e of data) {
+    if (e["sourceCurrency"] === "BTC" && e["targetCurrency"] === "EUR" || e["targetCurrency"] === "USD"
+  ) {
+    console.log(e["amount"])
+  } }
     log("```")
     log("  Bit Trade Helper");
     log(" bth.patocka.eu.org");
