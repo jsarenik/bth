@@ -38,8 +38,15 @@ function genoutput() {
   usder=0
   $.get("https://display.anyone.eu.org/api/strike.json", function(data){
     for (e of data) {
-      if (e["sourceCurrency"] === "BTC" && (e["targetCurrency"] === "EUR" || e["targetCurrency"] === "USD")) {
-        console.log(e["amount"])
+      if (e["sourceCurrency"] === "BTC") {
+        switch(e["targetCurrency"]) {
+        case "EUR":
+          log("this is EUR");
+          log(e["amount"])
+        case "USD":
+          log("this is USD");
+          log(e["amount"])
+        }
       }
     }
     log("```")
