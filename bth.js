@@ -42,10 +42,14 @@ function genoutput() {
         switch(e["targetCurrency"]) {
         case "EUR":
           log("this is EUR");
-          log(e["amount"])
+          log(e["amount"]);
+          eurer=e["amount"];
+          break;
         case "USD":
           log("this is USD");
-          log(e["amount"])
+          log(e["amount"]);
+          usder=e["amount"];
+          break;
         }
       }
     }
