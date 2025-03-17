@@ -37,22 +37,22 @@ function genoutput() {
   eurer=0
   usder=0
   $.get("https://display.anyone.eu.org/api/strike.json", function(data){
-  for (e of data) {
-    if (e["sourceCurrency"] === "BTC" && e["targetCurrency"] === "EUR" || e["targetCurrency"] === "USD"
-  ) {
-    console.log(e["amount"])
-  } }
+    for (e of data) {
+      if (e["sourceCurrency"] === "BTC" && e["targetCurrency"] === "EUR" || e["targetCurrency"] === "USD"
+    ) {
+      console.log(e["amount"])
+    } }
     log("```")
     log("  Bit Trade Helper");
     log(" bth.patocka.eu.org");
     log("====================");
     log("Timestamp:", Math.floor(time/1000));
-    log("  USD: " + data.bpi.USD.rate);
-    log("  EUR: " + data.bpi.EUR.rate);
+    //log("  USD: " + data.bpi.USD.rate);
+    //log("  EUR: " + data.bpi.EUR.rate);
     if(mynumber != 0) {
     switch(mywhat) {
       case "EUR":
-        y = data.bpi.EUR.rate;
+        //y = data.bpi.EUR.rate;
         y = y.replace(',','');
         log("And " + mynumber + " EUR is ...");
         result = (1 / y * mynumber).toFixed(8)
@@ -60,7 +60,7 @@ function genoutput() {
         log("  " + (result * 100000000).toFixed(0) + " sat");
         break;
       case "USD":
-        y = data.bpi.USD.rate;
+        //y = data.bpi.USD.rate;
         y = y.replace(',','');
         log("And " + mynumber + " USD is ...");
         result = (1 / y * mynumber).toFixed(8)
@@ -68,7 +68,7 @@ function genoutput() {
         log("  " + (result * 100000000).toFixed(0) + " sat");
         break;
       case "satoshi":
-        y = data.bpi.USD.rate;
+        //y = data.bpi.USD.rate;
         y = y.replace(',','');
         log(mynumber + " sat is ...");
         resultd = (data.bpi.USD.rate.replace(',','')/100000000*mynumber).toFixed(2)
