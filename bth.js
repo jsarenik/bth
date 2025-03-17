@@ -41,13 +41,9 @@ function genoutput() {
       if (e["sourceCurrency"] === "BTC") {
         switch(e["targetCurrency"]) {
         case "EUR":
-          log("this is EUR");
-          log(e["amount"]);
           eurer=e["amount"];
           break;
         case "USD":
-          log("this is USD");
-          log(e["amount"]);
           usder=e["amount"];
           break;
         }
@@ -58,35 +54,29 @@ function genoutput() {
     log(" bth.patocka.eu.org");
     log("====================");
     log("Timestamp:", Math.floor(time/1000));
-    //log("  USD: " + data.bpi.USD.rate);
-    //log("  EUR: " + data.bpi.EUR.rate);
+    log("  USD: " + usder);
+    log("  EUR: " + eurer);
     if(mynumber != 0) {
     switch(mywhat) {
       case "EUR":
-        y=5;
-        //y = data.bpi.EUR.rate;
-        //y = y.replace(',','');
+        y=eurer;
         log("And " + mynumber + " EUR is ...");
         result = (1 / y * mynumber).toFixed(8)
         log("  " + result + " BTC");
         log("  " + (result * 100000000).toFixed(0) + " sat");
         break;
       case "USD":
-        y=5;
-        //y = data.bpi.USD.rate;
-        //y = y.replace(',','');
+        y=usder;
         log("And " + mynumber + " USD is ...");
         result = (1 / y * mynumber).toFixed(8)
         log("  " + result + " BTC");
         log("  " + (result * 100000000).toFixed(0) + " sat");
         break;
       case "satoshi":
-        y=5;
-        //y = data.bpi.USD.rate;
-        //y = y.replace(',','');
+        y=usder;
         log(mynumber + " sat is ...");
-        resultd = (data.bpi.USD.rate.replace(',','')/100000000*mynumber).toFixed(2)
-        resulte = (data.bpi.EUR.rate.replace(',','')/100000000*mynumber).toFixed(2)
+        resultd = (usder.replace(',','')/100000000*mynumber).toFixed(2)
+        resulte = (eurer.replace(',','')/100000000*mynumber).toFixed(2)
         log("  USD: " + resultd);
         log("  EUR: " + resulte);
         break;
